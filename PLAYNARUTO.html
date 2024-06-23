@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARUTO THE LAST NINJA</title>
+</head>
+<body>
+    <header>
+        <a href="FIRSWEB.html" class="logo"><img decoding="async" src="name.png"></a>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+  
+  <main>
+    <video controls>
+      <source src="https://www.example.com/path-to-your-video.mp4" type="video/mp4">
+    </video>
+  </main>
+  <a class="play" onclick="toggleVideo();"><img decoding="async" src="play.png">Watch Trailer</a>
+</div>
+
+<div class="trailer">
+    <video src="n.mp4" controls="true" autoplay="true"></video>
+    <img decoding="async" src="close.png" class="close" onclick="toggleVideo();">
+</div>
+
+<script src="main.js" defer data-deferred="1"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<style>
+    @import url('http://fonts.gstatic.com/css?family=Poppins:200,300,400,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+    }
+
+header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: large;
+    }
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    z-index: 100;
+}
+
+header .logo img{
+    max-width: 150px;   
+}
+
+header .logo:hover img{
+    transform: rotate(360deg);     
+}
+
+
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 2px solid rgb(249, 2, 2);
+    outline: none;
+    border-radius: 14px;
+    padding: 0 10px 0 45px;
+    backdrop-filter: blur(10px);
+}
+
+.search .fa-search{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color: #fd0404;
+    border-right: 1px solid #fff;
+}
+
+.search input::placeholder{
+    color: #faf8f8;
+}
+
+main {
+      padding: 20px;
+    }
+
+
+video {
+      width: 100%;
+      max-width: 1000px;
+      margin: 100px 0;
+     
+      
+
+    }
+
+main {
+      padding: 50px;
+      text-align: center;
+      margin: top 20px;
+    }
+
+.play {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.trailer video{
+    max-width: 900px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border: 0.1rem solid rgb(255, 255, 255);
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+    
+  </style>
